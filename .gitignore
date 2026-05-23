@@ -1,0 +1,31 @@
+# Maven
+lhcms-backend/target/
+lhcms-backend/.mvn/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VS Code
+.vscode/
+
+# Node
+lhcms-frontend/node_modules/
+lhcms-frontend/build/
+
+# Environment
+.env
+*.env
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spring Boot
+lhcms-backend/src/main/resources/application.properties
