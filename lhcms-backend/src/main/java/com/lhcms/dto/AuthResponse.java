@@ -8,9 +8,16 @@ import lombok.Getter;
 public class AuthResponse {
 
     private String token;
-    private Long id;
-    private String username;
-    private String firstName;
-    private String lastName;
-    private String role;
+    private UserDto user;
+
+    @Getter
+    @AllArgsConstructor
+    public static class UserDto {
+        private Long id;
+        private String username;
+        private String email;
+        private String firstName;
+        private String lastName;
+        private String role;
+    }
 }

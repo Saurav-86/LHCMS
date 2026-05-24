@@ -2,6 +2,7 @@ package com.lhcms.controller;
 
 import com.lhcms.dto.AuthResponse;
 import com.lhcms.dto.LoginRequest;
+import com.lhcms.dto.RegisterDoctorRequest;
 import com.lhcms.dto.RegisterRequest;
 import com.lhcms.security.JwtTokenProvider;
 import com.lhcms.security.UserPrincipal;
@@ -34,6 +35,11 @@ public class AuthController {
     public ResponseEntity<AuthResponse> register(@Valid @RequestBody RegisterRequest request) {
         AuthResponse response = authService.registerPatient(request);
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/register/doctor")
+    public ResponseEntity<AuthResponse> registerDoctor(@Valid @RequestBody RegisterDoctorRequest request) {
+        return ResponseEntity.ok(authService.registerDoctor(request));
     }
 
     @PostMapping("/login")
